@@ -1,0 +1,49 @@
+.intro {
+  padding-top: 74px;
+  padding-bottom: 550px;
+  background-image: url("../../img/intro-bg.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.intro__header {
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  color: #212b31;
+  max-width: 818px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@include breakpoint-down(950) {
+  .intro {
+    background-size: 100% auto;
+    padding-bottom: 400px;
+  }
+  .intro__header {
+    font-size: 40px;
+    line-height: 58px;
+  }
+}
+@include breakpoint-down(650) {
+  .intro {
+    padding-top: 50px;
+    padding-bottom: 300px;
+  }
+  .intro__header {
+    font-size: 30px;
+    line-height: 54px;
+  }
+}
+@include breakpoint-down(400) {
+  .intro {
+    padding-bottom: 200px;
+  }
+  .intro__header {
+    font-size: 25px;
+    line-height: 54px;
+  }
+}

@@ -1,0 +1,139 @@
+.nav {
+  flex-grow: 1;
+}
+.nav__inner {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 15px;
+  padding-left: 0;
+  list-style-type: none;
+}
+.nav__item {
+  margin: 5px;
+}
+.nav__link {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
+  color: #72787d;
+  padding: 5px;
+}
+.nav__toggler {
+  display: none;
+}
+@keyframes nav-animation {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes nav-item {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@include breakpoint-down(950) {
+  .nav__inner {
+  }
+  .nav__list {
+    margin-right: 0;
+    justify-content: center;
+  }
+  .nav__item {
+  }
+  .nav__link {
+  }
+  .nav__toggler {
+    display: none;
+  }
+  .nav__request {
+    display: none;
+  }
+}
+@include breakpoint-down(650) {
+  .nav {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .nav__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    padding: 50px;
+    transform: translateX(100%);
+    animation-name: nav-animation;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .nav__item {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    opacity: 0;
+    animation-name: nav-item;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  .nav__link {
+  }
+  .nav__toggler {
+    display: block;
+    position: fixed;
+    padding: 0;
+    right: 20px;
+    top: 4.5%;
+    z-index: 10;
+    width: 25px;
+    height: 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-image: url("../img/toggle.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    transition: background-position 0.3s ease;
+  }
+  .nav__request {
+    display: block;
+    opacity: 0;
+    animation-name: nav-item;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+}

@@ -1,0 +1,10 @@
+.button-group {
+  display: flex;
+  align-items: center;
+  &--center {
+    justify-content: center;
+  }
+  &--left {
+    justify-content: left;
+  }
+}

@@ -1,0 +1,65 @@
+$dark-color: #212b31;
+
+.button {
+  display: inline-block;
+  vertical-align: baseline;
+  text-decoration: none;
+  padding: 12px 24px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 17px;
+  line-height: 24px;
+  text-transform: capitalize;
+  text-align: center;
+  white-space: nowrap;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+
+  &--dark {
+    color: #fff;
+    background-color: $dark-color;
+    border: 1px solid $dark-color;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+  }
+  &--dark:hover {
+    color: $dark-color;
+    background-color: #fff;
+    border: 1px solid $dark-color;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+  }
+  &--dark-bordered {
+    color: #fff;
+    background-color: $dark-color;
+    border: 1px solid #dadedf;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+  }
+  &--light {
+    color: $dark-color;
+    font-size: 17px;
+    line-height: 24px;
+    background-color: #fff;
+    border: 1px solid #dadedf;
+  }
+  &--light:hover {
+    color: #fff;
+    font-size: 17px;
+    line-height: 24px;
+    background-color: $dark-color;
+    border: 1px solid #dadedf;
+  }
+  &--small {
+    padding: 8px 19px;
+    font-size: 15px;
+    line-height: 16px;
+  }
+  &--mr {
+    margin-right: 16px;
+  }
+}
+@include breakpoint-down(400) {
+  .button {
+    padding: 8px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

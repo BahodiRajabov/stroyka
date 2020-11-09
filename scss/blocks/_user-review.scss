@@ -1,0 +1,32 @@
+.user-review__quote {
+  max-width: 480px;
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 30px;
+  line-height: 48px;
+  color: #212b31;
+}
+.user-review__user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.user-review__img {
+  display: block;
+  margin-right: 8px;
+}
+.user-review__user-details {
+}
+.user-review__username {
+  margin: 0;
+  margin-bottom: 1px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #212b31;
+}
+.user-review__user-job {
+  margin: 0;
+  font-size: 16px;
+  line-height: 19px;
+  color: #72787d;
+}

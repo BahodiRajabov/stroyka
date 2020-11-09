@@ -1,0 +1,29 @@
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Arial", sans-serif;
+  color: #212b31;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+@include breakpoint-down(650) {
+  body {
+    margin-top: 80px;
+  }
+}

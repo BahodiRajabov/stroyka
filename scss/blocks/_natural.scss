@@ -1,0 +1,124 @@
+.natural {
+  padding-top: 62px;
+  padding-bottom: 144px;
+}
+.natural__info {
+  max-width: 860px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 48px;
+}
+.natural__header {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 32px;
+  line-height: 48px;
+  color: #212b31;
+}
+.natural__desc {
+  font-size: 20px;
+  line-height: 32px;
+  color: #72787d;
+}
+.natural__list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 62px;
+  margin-right: -16px;
+  margin-left: -16px;
+  padding-left: 0;
+  list-style-type: none;
+}
+.natural__item {
+  text-align: center;
+  max-width: 332px;
+  width: 100%;
+  margin-right: 16px;
+  margin-left: 16px;
+
+  &--dirty::before {
+    background-image: url("../img/dirty.png");
+  }
+  &--re::before {
+    background-image: url("../img/re.png");
+  }
+  &--people::before {
+    background-image: url("../img/people.png");
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 50px;
+    display: block;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 19px;
+  }
+}
+.natural__item-title {
+  margin-top: 0;
+  margin-bottom: 11px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #212b31;
+}
+.natural__item-desc {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #72787d;
+}
+.natural__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #f6f8f9;
+  border-radius: 5px;
+  padding: 45px 40px;
+}
+.natural__footer-desc {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: #212b31;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../img/help.png");
+    margin-right: 24px;
+  }
+}
+@include breakpoint-down(1100) {
+  .natural__item {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .natural__footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .natural__footer-desc {
+    flex-direction: column;
+    margin-bottom: 10px;
+    &::before {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}

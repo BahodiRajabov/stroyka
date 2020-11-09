@@ -1,0 +1,42 @@
+.item-info {
+  display: flex;
+  align-items: flex-start;
+  &::before {
+    flex-shrink: 0;
+    content: "";
+    width: 48px;
+    height: 48px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 16px;
+  }
+  &--win::before {
+    background-image: url("../img/win.png");
+  }
+  &--cheked::before {
+    background-image: url("../img/checked.png");
+  }
+  &--lider::before {
+    background-image: url("../img/lider.png");
+  }
+  &--help::before {
+    background-image: url("../img/help-whyus.png");
+  }
+}
+.item-info__inner {
+}
+.item-info__header {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #212b31;
+}
+.item-info__desc {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #72787d;
+}
